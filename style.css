@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+*{
+    box-sizing: border-box;
+    /* transition: all ease-in-out 250ms; */
+}
+
+/* always do this in responsive websites */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    width: 95%;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+/* TypoGraphy */
+
+.title{
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+}
+
+h1{
+    /* font-weight: 300; */
+    font-size: 2.5rem;
+}
+
+p{
+    margin: 0;
+    line-height: 2;
+}
+/* Buttons */
+
+.button{
+    font-size: 1.15rem;
+    text-decoration: none;
+    border: 2px solid;
+    padding: .5em 1.75em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.button-accent{
+    color: #00ff6c;
+}
+
+.button-small{
+    font-size: .7em;
+    font-weight: 700;
+}
+
+.button-accent:hover,
+.button-accent:focus{
+    background: white;
+    color: #00ff6c;
+    font-weight: bold;
+}
+
+.title span{
+    font-weight: 300;
+    display: block;
+    font-size: .88em;
+}
+
+
+body{
+    margin: 0;
+    font-family: 'Raleway', 'Roboto' ,sans-serif;
+    text-align: center; 
+}
+
+header{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 2em;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin: 1em;
+}
+
+nav a{
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    color: white;
+    /* background: pink; */
+}
+
+nav a:hover,
+nav a:focus{
+    color: #ddd;
+}
+
+/* Home-Hero */
+
+.home-hero{
+    background: url('img/hero-bg.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10em 0;
+    color: white;
+}
+
+/* home-hero */
+
+.home-about-textbox{
+    background-color: #232323;
+    padding: 5em;
+    width: 100vw;
+    margin-left: -2.5%;
+    outline: 2px solid #00ff6c; 
+    outline-offset: -2.35em;
+    color: #fff;
+    position: relative;
+}
+
+.home-about-textbox h1{
+    color: #00ff6c;
+    margin-top: 0.15em;
+    position: absolute;
+    font-size: 2.12em;
+    top: 0.3em;
+    background: #232323;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* Portfolio */
+
+.port-desc{
+    position: absolute;
+    z-index: 100;
+    padding: 1em;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    color: white;
+    background: rgba(0,0,0,.60);
+
+}
+
+.port-desc p{
+    margin: 0;
+}
+
+.portfolio{
+    margin: 3em 0;
+}
+
+.port-item{
+    position: relative;
+    margin: 0;
+}
+
+.port-item img{
+    margin-bottom: 0;
+    display: block;
+}
+
+.cta{
+    margin-top: 0;
+    background: #00ff6c;
+}
+
+.cta a{
+    border: 2px solid black;
+    margin-bottom: 2em;
+    color: black;
+}
+
+footer{
+    background: #232323;
+    color: white;
+    text-align: left;
+    padding: 5em 0;
+}
+
+.unstyled-list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+[class^=col-]{
+    margin-top: 1em;
+    width: 100%;
+}
+
+.col-1{
+    float: left;
+    width: 33.33334%;
+}
+
+
+
+footer::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+@media(min-width:40rem){
+
+    [class^=col-]{
+        float: left;
+        padding: 0 .5em;
+    }
+    
+
+    [class^=col-]:first-child{
+        padding-left: 0;
+    }
+    
+    [class^=col-]:last-child{
+        padding-right: 0;
+    }
+    
+.col-3{
+    width: 50%;
+}
+
+.col-1{
+    width: 16.666%
+}
+}
+
+
+@media(min-width:60rem){
+    .title{
+        font-size: 2.7rem;
+    }
+
+    .port-items{
+        width: 100%;
+    }
+
+    .port-item{
+        width: 50%;
+        padding: 4em;
+        /* background: #ddd; */
+        overflow: hidden;
+        outline: 5px solid #00ff6c;
+        outline-offset: -4.2em;
+    }
+
+    .port-item:hover .port-desc{
+        transform: translateY(-70%);
+    }
+
+    .port-desc{
+        transform: translateY(150%);
+        left: 4em;
+        right: 4em;
+    }
+
+    .logo{
+        float: left;
+        margin-left: 3em;
+        /* margin-top: 0.4em; */
+    }
+
+    nav{
+        float: right;
+    }
+
+    .home-hero{
+        height: 100vh;
+        padding-top: 35vh;
+    }
+
+    .home-about-textbox{
+       width: 45%;
+       margin-left: -2.5%;
+       text-align: left;
+       top: -5em;
+       box-shadow:  0 0 4em 0 rgba(0,0,0,.25%);
+    }
+
+    .home-about{
+        background: url('img/who-we-are.jpg');
+        padding-bottom: 10em;
+        background-repeat: no-repeat;
+    }
+}
+
+@media(min-width:30rem){
+    .port-item{
+        float: left;
+        width: 50%;
+    }
+}
